@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trail Making Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Écran d'accueil -->
+      <div id="welcome-screen" class="screen active">
+        <h1>Trail Making Test</h1>
+        <div class="participant-input">
+          <label for="participant-id">Code participant :</label><br /><br />
+          <input
+            type="text"
+            id="participant-id"
+            placeholder="Entrez votre code..."
+          />
+        </div>
+        <button class="btn" id="start-test-btn">Commencer le test</button>
+      </div>
+
+      <!-- Instructions entraînement A -->
+      <div id="practice-a-screen" class="screen">
+        <h1>ENTRAÎNEMENT PARTIE A</h1>
+        <div class="instructions">
+          Bienvenue dans le Trail Making Test.<br /><br />
+          Commençons par la phase A du test, dans laquelle vous devez relier des
+          points dans l'ordre croissant.<br /><br />
+          Pour réaliser ce test, vous allez commencer par un petit
+          entraînement.<br /><br />
+          Vous devez cliquer sur les nombres dans l'ordre croissant, en allant
+          le plus vite possible et en essayant de ne pas faire d'erreurs.
+        </div>
+        <button class="btn" id="start-practice-a-btn">
+          Commencer l'entraînement
+        </button>
+      </div>
+
+      <!-- Jeu -->
+      <div id="game-screen" class="screen">
+        <div class="game-info">
+          <span id="current-phase">Phase: </span>
+          <span id="timer">Temps: 0.0s</span>
+          <span id="errors">Erreurs: 0</span>
+        </div>
+        <div class="error-message" id="error-msg"></div>
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+      </div>
+
+      <!-- Instructions test A -->
+      <div id="test-a-screen" class="screen">
+        <h1>TEST PARTIE A</h1>
+        <div class="instructions">
+          Vous avez terminé l'entraînement. Vous allez maintenant réaliser la
+          phase de test dont les résultats seront enregistrés.<br /><br />
+          Comme lors de l'entraînement, vous devez cliquer sur les nombres dans
+          l'ordre croissant, en allant le plus vite possible et en essayant de
+          ne pas faire d'erreurs.
+        </div>
+        <button class="btn" id="start-test-a-btn">Commencer le test A</button>
+      </div>
+
+      <!-- Instructions entraînement B -->
+      <div id="practice-b-screen" class="screen">
+        <h1>ENTRAÎNEMENT PARTIE B</h1>
+        <div class="instructions">
+          Bravo, vous avez terminé la partie A de ce test! Vous allez maintenant
+          réaliser la partie B.<br /><br />
+          Ici la règle change.<br /><br />
+          Les cercles à l'écran contiennent soit un nombre (1, 2, 3, ...) soit
+          une lettre (A, B, C, ...).<br /><br />
+          En commençant par le 1, vous devez alterner les chiffres et les
+          lettres et suivre l'ordre croissant des chiffres et l'ordre
+          alphabétique des lettres (1 - A - 2 - B - 3 - C ...).<br /><br />
+          Répondez le plus vite possible et en essayant de ne pas faire
+          d'erreurs.
+        </div>
+        <button class="btn" id="start-practice-b-btn">
+          Commencer l'entraînement B
+        </button>
+      </div>
+
+      <!-- Instructions test B -->
+      <div id="test-b-screen" class="screen">
+        <h1>TEST PARTIE B</h1>
+        <div class="instructions">
+          Vous avez terminé l'entraînement de cette partie B. Vous allez
+          maintenant réaliser la phase de test dont les résultats seront
+          enregistrés.<br /><br />
+          Pour rappel, les cercles à l'écran contiennent soit un nombre (1, 2,
+          3, ...) soit une lettre (A, B, C, ...).<br /><br />
+          En commençant par le 1, vous devez alterner les chiffres et les
+          lettres et suivre l'ordre croissant des chiffres et l'ordre
+          alphabétique des lettres (1 - A - 2 - B - 3 - C ...).<br /><br />
+          Répondez le plus vite possible et en essayant de ne pas faire
+          d'erreurs.
+        </div>
+        <button class="btn" id="start-test-b-btn">Commencer le test B</button>
+      </div>
+
+      <!-- Écran final -->
+      <div id="final-screen" class="screen">
+        <h1>Test terminé !</h1>
+        <div class="instructions">
+          Merci d'avoir participé au Trail Making Test !
+        </div>
+        <div class="results" id="final-results"></div>
+        <button class="btn" id="download-results-btn">
+          Télécharger les résultats
+        </button>
+        <br /><br />
+        <button class="btn" id="restart-btn" style="background: #28a745">
+          Recommencer
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
