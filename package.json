@@ -1,9 +1,1 @@
-{
-  "name": "exetests",
-  "version": "1.0.0",
-  "main": "index.html",
-  "license": "MIT",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.44.3"
-  }
-}
+
