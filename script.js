@@ -1,3 +1,4 @@
+import './lib/utils.js'
 // ====== Config & état ======
 const CANVAS = document.getElementById("gameCanvas");
 const CTX = CANVAS.getContext("2d");
@@ -869,3 +870,4 @@ for (const file of testFiles) {
     console.error(`⚠️ Erreur pour ${file}:`, err);
   }
 }
+
